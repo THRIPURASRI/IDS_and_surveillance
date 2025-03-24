@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>Welcome, {{ user.username }}!</p>
+
+<div>
+    <h3>Live Feed</h3>
+    <video id="liveVideo" width="640" height="480" autoplay></video>
+    <canvas id="frameCanvas" width="640" height="480" style="display:none;"></canvas>
+</div>
+
+<div>
+    <h3>Intrusion Count: <span id="intrusionCount">0</span></h3>
+</div>
+
+<div>
+    <h3>Settings</h3>
+    <p>Email: {{ user.email }}</p>
+    <p>Phone: {{ user.phone }}</p>
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

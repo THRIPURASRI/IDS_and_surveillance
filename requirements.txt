@@ -1,0 +1,9 @@
+flask
+flask_sqlalchemy
+opencv-python
+ultralytics
+face-recognition
+numpy
+twilio
+python-dotenv
+email-validator

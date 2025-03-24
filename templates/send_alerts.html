@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Send Alerts{% endblock %}
+{% block content %}
+<h2>Test Alerts</h2>
+
+<p>Click the button below to send a test email and SMS alert.</p>
+
+<form action="{{ url_for('send_alerts') }}" method="GET">
+    <button type="submit">Send Test Alerts</button>
+</form>
+
+{% if message %}
+<p style="color: green;">{{ message }}</p>
+{% endif %}
+
+{% endblock %}
+
